@@ -9,6 +9,13 @@ from TensionRigFunctions.TensionRigFunctions import readers as rdr
 
 rdr=rdr()
 
-toprint=rdr.TensionReader(file=r'C:\Users\eivinhug\NTNU\PhD\Testing\RigFiles_18042018_2\B26.txt')
+toprint=rdr.TensionReaderMTS(file=r'C:\Users\eivinhug\OneDrive - NTNU\PhD_Backup\NTNU\PhD\Testing\Laminate_E\TestRig_Files\E07-14092018 09-14-18 18 00 39\E07_14092018.txt')
+print(len(toprint[0]))
 
-print(toprint)
+print(type(toprint[0][0]))
+print(toprint[0][0])
+
+print(min(toprint[1]))
+print("Fmin",min(toprint[1]))
+plt.plot(toprint[1],toprint[0])
+plt.show()
